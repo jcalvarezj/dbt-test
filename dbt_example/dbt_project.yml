@@ -18,3 +18,4 @@ models:
   dbt_example:
     bronze:
       +materialized: table
+      +schema: bronze
