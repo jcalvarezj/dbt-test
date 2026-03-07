@@ -21,3 +21,8 @@ models:
       +schema: bronze
     silver:
       +materialized: table
+      +schema: silver
+
+seeds:
+  dbt_example:
+    +schema: source
