@@ -12,6 +12,6 @@ Use `uv sync` to create and prepare a .venv virtual environment and then activat
 
 ## Execution
 
-Execute the `run.sh` script with an activated virtual environment to populate the source schema and materialize the models into an existing `dbt_example_dev` catalog of a Databricks DW
+Execute the `dbt build [--target <target name>]` command with an activated virtual environment inside the `dbt_example` folder to populate the source schema and materialize the models into the corresponding target catalog of an existing Databricks DW accessible with the token specified with the environment variable `DBT_DATABRICKS_TOKEN`
 
 This should create the corresponding Schemas and Catalogs for analytic querying (for example queries on [dbt_example/analyses/](dbt_example/analyses/)), and run several tests on tables

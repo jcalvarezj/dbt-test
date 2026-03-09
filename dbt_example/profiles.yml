@@ -1,0 +1,19 @@
+dbt_example:
+  outputs:
+    dev:
+      catalog: dbt_example_dev
+      host: dbc-7a53bb13-6c7a.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/16d4b3c262c9e47d
+      schema: default
+      threads: 1
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
+      type: databricks
+    prod:
+      catalog: dbt_example_prod
+      host: dbc-7a53bb13-6c7a.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/16d4b3c262c9e47d
+      schema: default
+      threads: 4
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
+      type: databricks
+  target: dev
